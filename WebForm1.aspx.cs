@@ -39,7 +39,7 @@ namespace HashingWeb
             {
                 byte[] pwd_bytes = Encoding.ASCII.GetBytes(pwd);
                 byte[] salted_bytes = CombineArrays(pwd_bytes, salt);
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 100000; i++)
                 {
                     salted_bytes = hash.ComputeHash(salted_bytes);
                 }
