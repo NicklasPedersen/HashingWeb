@@ -81,7 +81,7 @@ namespace HashingWeb
         {
             using (var conn = new MySqlConnection(connStr))
             {
-                byte[] salt = new byte[0];//GenerateSalt();
+                byte[] salt = GenerateSalt();
                 byte[] hash = HashWithSalt(pwd, salt);
                 conn.Open();
                 MySqlCommand cmd = conn.CreateCommand();
